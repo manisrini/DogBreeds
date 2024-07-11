@@ -9,7 +9,9 @@ import UIKit
 
 final class DogsListVC : UIViewController{
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var dogsTableView: UITableView!
+    
     var viewModel = DogsListViewModel()
     private static let cellNibName = "ListTblCell"
     
@@ -21,6 +23,7 @@ final class DogsListVC : UIViewController{
     
     private func initialSetup(){
         self.registerCells()
+        self.searchBar.delegate = self
         self.dogsTableView.dataSource = self
         self.dogsTableView.delegate = self
         self.fetchDogs()
@@ -38,7 +41,7 @@ final class DogsListVC : UIViewController{
             }
         }
         
-            }
+    }
     
     private func fetchDogImages(){
         for (index,dog) in viewModel.dogs.enumerated() {
@@ -59,12 +62,12 @@ final class DogsListVC : UIViewController{
 extension DogsListVC : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.viewModel.dogs.count
+       self.viewModel.getDataSource().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let breedCell = tableView.dequeueReusableCell(withIdentifier: BreedTblCell.nibName, for: indexPath) as? BreedTblCell{
-            breedCell.config(model: self.viewModel.dogs[indexPath.row])
+            breedCell.config(model: self.viewModel.getDataSource()[indexPath.row])
             return breedCell
         }
         return UITableViewCell()
@@ -72,8 +75,37 @@ extension DogsListVC : UITableViewDataSource,UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let breedDetailVC = DogBreedDetailVC.storyboardInstance() as? DogBreedDetailVC{
-            breedDetailVC.imageURL = self.viewModel.dogs[indexPath.row].imageURL ?? ""
+            breedDetailVC.dogBreed = self.viewModel.dogs
+            breedDetailVC.selectedIndex = indexPath.row
             self.navigationController?.pushViewController(breedDetailVC, animated: true)
         }
+    }
+}
+
+extension DogsListVC : UISearchBarDelegate{
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.viewModel.isSearching = false
+        self.view.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty{
+            if !self.viewModel.isTextEmpty{
+                self.viewModel.isTextEmpty = true
+                self.performSearch(searchText: "")
+            }
+        }else{
+            self.performSearch(searchText: searchText)
+        }
+    }
+    
+    private func performSearch(searchText : String){
+        self.viewModel.filterDogBreedsWith(searchText)
+        self.dogsTableView.reloadData()
     }
 }

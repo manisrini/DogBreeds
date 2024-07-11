@@ -17,22 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Urg-KU-cSL">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dEY-uK-aT0">
+                                <rect key="frame" x="0.0" y="103" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Ue-0i-cFr"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="EVR-ir-fBx"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Urg-KU-cSL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="EaS-2S-Ywr"/>
+                            <constraint firstItem="dEY-uK-aT0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8BS-9v-BQA"/>
+                            <constraint firstItem="Urg-KU-cSL" firstAttribute="top" secondItem="dEY-uK-aT0" secondAttribute="bottom" id="BMc-rb-qTD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Urg-KU-cSL" secondAttribute="trailing" id="SUF-tz-9gc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Urg-KU-cSL" secondAttribute="bottom" id="WNw-nj-IQs"/>
+                            <constraint firstItem="dEY-uK-aT0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YOa-7k-a8t"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dEY-uK-aT0" secondAttribute="trailing" id="cxA-le-dMu"/>
                             <constraint firstItem="Urg-KU-cSL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qCO-51-frk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lSV-5G-1Kf"/>
                     <connections>
                         <outlet property="dogsTableView" destination="Urg-KU-cSL" id="kkT-qR-2fw"/>
+                        <outlet property="searchBar" destination="dEY-uK-aT0" id="24b-Sf-Mao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

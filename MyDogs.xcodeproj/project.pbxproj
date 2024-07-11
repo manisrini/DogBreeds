@@ -10,6 +10,9 @@
 		2A0C01F92C404FC8008D53CB /* DogBreedDetailVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C01F82C404FC8008D53CB /* DogBreedDetailVC.storyboard */; };
 		2A0C01FB2C404FD5008D53CB /* DogBreedDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C01FA2C404FD5008D53CB /* DogBreedDetailVC.swift */; };
 		2A0C01FE2C40535F008D53CB /* ViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C01FD2C40535F008D53CB /* ViewController+ext.swift */; };
+		2A0C02022C4063BD008D53CB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C02012C4063BD008D53CB /* MenuView.swift */; };
+		2A0C02052C4064EA008D53CB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0C02042C4064EA008D53CB /* SnapKit */; };
+		2A0C02072C4064EA008D53CB /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0C02062C4064EA008D53CB /* SnapKit-Dynamic */; };
 		2A68CBFC2C403F36007CB7E9 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68CBFB2C403F36007CB7E9 /* DogModel.swift */; };
 		2A68CC002C404202007CB7E9 /* BreedTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A68CBFF2C404202007CB7E9 /* BreedTblCell.xib */; };
 		2A68CC012C404202007CB7E9 /* BreedTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68CBFE2C404202007CB7E9 /* BreedTblCell.swift */; };
@@ -27,6 +30,7 @@
 		2A0C01F82C404FC8008D53CB /* DogBreedDetailVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogBreedDetailVC.storyboard; sourceTree = "<group>"; };
 		2A0C01FA2C404FD5008D53CB /* DogBreedDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailVC.swift; sourceTree = "<group>"; };
 		2A0C01FD2C40535F008D53CB /* ViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ext.swift"; sourceTree = "<group>"; };
+		2A0C02012C4063BD008D53CB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2A68CBFB2C403F36007CB7E9 /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		2A68CBFE2C404202007CB7E9 /* BreedTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTblCell.swift; sourceTree = "<group>"; };
 		2A68CBFF2C404202007CB7E9 /* BreedTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTblCell.xib; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0C02052C4064EA008D53CB /* SnapKit in Frameworks */,
+				2A0C02072C4064EA008D53CB /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 		2A0C01F72C404F93008D53CB /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				2A0C02002C406398008D53CB /* DropdownView */,
 				2A0C01F82C404FC8008D53CB /* DogBreedDetailVC.storyboard */,
 				2A0C01FA2C404FD5008D53CB /* DogBreedDetailVC.swift */,
 			);
@@ -68,6 +75,14 @@
 				2A0C01FD2C40535F008D53CB /* ViewController+ext.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2A0C02002C406398008D53CB /* DropdownView */ = {
+			isa = PBXGroup;
+			children = (
+				2A0C02012C4063BD008D53CB /* MenuView.swift */,
+			);
+			path = DropdownView;
 			sourceTree = "<group>";
 		};
 		2A68CBFD2C404163007CB7E9 /* Cell */ = {
@@ -147,6 +162,10 @@
 			dependencies = (
 			);
 			name = MyDogs;
+			packageProductDependencies = (
+				2A0C02042C4064EA008D53CB /* SnapKit */,
+				2A0C02062C4064EA008D53CB /* SnapKit-Dynamic */,
+			);
 			productName = MyDogs;
 			productReference = 2A7D05002C400C7D0094BFA9 /* MyDogs.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +194,9 @@
 				Base,
 			);
 			mainGroup = 2A7D04F72C400C7D0094BFA9;
+			packageReferences = (
+				2A0C02032C4064E9008D53CB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2A7D05012C400C7D0094BFA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +231,7 @@
 				2A7D051A2C400D240094BFA9 /* DogsListVC.swift in Sources */,
 				2A0C01FE2C40535F008D53CB /* ViewController+ext.swift in Sources */,
 				2A7D05042C400C7D0094BFA9 /* AppDelegate.swift in Sources */,
+				2A0C02022C4063BD008D53CB /* MenuView.swift in Sources */,
 				2A7D05202C400EB60094BFA9 /* NetworkManager.swift in Sources */,
 				2A7D05062C400C7D0094BFA9 /* SceneDelegate.swift in Sources */,
 				2A68CBFC2C403F36007CB7E9 /* DogModel.swift in Sources */,
@@ -427,6 +450,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A0C02032C4064E9008D53CB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A0C02042C4064EA008D53CB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A0C02032C4064E9008D53CB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2A0C02062C4064EA008D53CB /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A0C02032C4064E9008D53CB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A7D04F82C400C7D0094BFA9 /* Project object */;
 }

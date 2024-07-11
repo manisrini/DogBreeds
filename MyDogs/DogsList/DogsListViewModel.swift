@@ -10,6 +10,9 @@ import Foundation
 final class DogsListViewModel{
     
     var dogs : [DogBreedModel] = []
+    var filteredDogs : [DogBreedModel] = []
+    var isSearching : Bool = false
+    var isTextEmpty : Bool = false
     
     func fetchDogs(completion : @escaping() -> Void){
         
@@ -48,11 +51,32 @@ final class DogsListViewModel{
         }
     }
     
+    
+    func filterDogBreedsWith(_ char : String){
+        if char.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty{
+            self.filteredDogs = self.dogs
+            return
+        }
+        
+        self.isSearching = true
+        let filteredDogs = self.dogs.filter { model in
+            return model.name.range(of: char.trimmingCharacters(in: .whitespacesAndNewlines),options: .caseInsensitive) != nil
+        }
+        self.filteredDogs = filteredDogs
+    }
+    
     private func createBreedModel(response : [String:Any]){
         if let data = response["message"] as? [String:Any]{
             self.dogs = data.map { key,value in
                 return DogBreedModel(name: key)
             }
         }
+    }
+    
+    func getDataSource() -> [DogBreedModel]{
+        if isSearching{
+            return self.filteredDogs
+        }
+        return self.dogs
     }
 }

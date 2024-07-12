@@ -13,6 +13,23 @@
 		2A0C02022C4063BD008D53CB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C02012C4063BD008D53CB /* MenuView.swift */; };
 		2A0C02052C4064EA008D53CB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0C02042C4064EA008D53CB /* SnapKit */; };
 		2A0C02072C4064EA008D53CB /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0C02062C4064EA008D53CB /* SnapKit-Dynamic */; };
+		2A1166BA2C40D2A800D95D18 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1166B92C40D2A800D95D18 /* CarouselView.swift */; };
+		2A1166F42C40D59B00D95D18 /* DogBreedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1166F32C40D59B00D95D18 /* DogBreedDetailViewModel.swift */; };
+		2A56B0CD2C41056100768CE3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C12C41056100768CE3 /* Roboto-Medium.ttf */; };
+		2A56B0CE2C41056100768CE3 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C22C41056100768CE3 /* Roboto-Light.ttf */; };
+		2A56B0CF2C41056100768CE3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C32C41056100768CE3 /* Roboto-Regular.ttf */; };
+		2A56B0D02C41056100768CE3 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C42C41056100768CE3 /* Roboto-BoldItalic.ttf */; };
+		2A56B0D12C41056100768CE3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C52C41056100768CE3 /* Roboto-Black.ttf */; };
+		2A56B0D22C41056100768CE3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C62C41056100768CE3 /* Roboto-Bold.ttf */; };
+		2A56B0D32C41056100768CE3 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C72C41056100768CE3 /* Roboto-Italic.ttf */; };
+		2A56B0D42C41056100768CE3 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C82C41056100768CE3 /* Roboto-BlackItalic.ttf */; };
+		2A56B0D52C41056100768CE3 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0C92C41056100768CE3 /* Roboto-LightItalic.ttf */; };
+		2A56B0D62C41056100768CE3 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0CA2C41056100768CE3 /* Roboto-MediumItalic.ttf */; };
+		2A56B0D72C41056100768CE3 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0CB2C41056100768CE3 /* Roboto-Thin.ttf */; };
+		2A56B0D82C41056100768CE3 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56B0CC2C41056100768CE3 /* Roboto-ThinItalic.ttf */; };
+		2A56B1122C41060500768CE3 /* Color+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56B1112C41060500768CE3 /* Color+ext.swift */; };
+		2A56B1142C41096D00768CE3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56B1132C41096D00768CE3 /* CarouselViewModel.swift */; };
+		2A56B1162C41151B00768CE3 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56B1152C41151B00768CE3 /* MenuViewModel.swift */; };
 		2A68CBFC2C403F36007CB7E9 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68CBFB2C403F36007CB7E9 /* DogModel.swift */; };
 		2A68CC002C404202007CB7E9 /* BreedTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A68CBFF2C404202007CB7E9 /* BreedTblCell.xib */; };
 		2A68CC012C404202007CB7E9 /* BreedTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68CBFE2C404202007CB7E9 /* BreedTblCell.swift */; };
@@ -31,6 +48,23 @@
 		2A0C01FA2C404FD5008D53CB /* DogBreedDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailVC.swift; sourceTree = "<group>"; };
 		2A0C01FD2C40535F008D53CB /* ViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ext.swift"; sourceTree = "<group>"; };
 		2A0C02012C4063BD008D53CB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		2A1166B92C40D2A800D95D18 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		2A1166F32C40D59B00D95D18 /* DogBreedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailViewModel.swift; sourceTree = "<group>"; };
+		2A56B0C12C41056100768CE3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		2A56B0C22C41056100768CE3 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		2A56B0C32C41056100768CE3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		2A56B0C42C41056100768CE3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2A56B0C52C41056100768CE3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		2A56B0C62C41056100768CE3 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		2A56B0C72C41056100768CE3 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		2A56B0C82C41056100768CE3 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2A56B0C92C41056100768CE3 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		2A56B0CA2C41056100768CE3 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2A56B0CB2C41056100768CE3 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		2A56B0CC2C41056100768CE3 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		2A56B1112C41060500768CE3 /* Color+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ext.swift"; sourceTree = "<group>"; };
+		2A56B1132C41096D00768CE3 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		2A56B1152C41151B00768CE3 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		2A68CBFB2C403F36007CB7E9 /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		2A68CBFE2C404202007CB7E9 /* BreedTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTblCell.swift; sourceTree = "<group>"; };
 		2A68CBFF2C404202007CB7E9 /* BreedTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTblCell.xib; sourceTree = "<group>"; };
@@ -62,9 +96,11 @@
 		2A0C01F72C404F93008D53CB /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				2A1166B82C40D28E00D95D18 /* CarouselView */,
 				2A0C02002C406398008D53CB /* DropdownView */,
 				2A0C01F82C404FC8008D53CB /* DogBreedDetailVC.storyboard */,
 				2A0C01FA2C404FD5008D53CB /* DogBreedDetailVC.swift */,
+				2A1166F32C40D59B00D95D18 /* DogBreedDetailViewModel.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -73,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2A0C01FD2C40535F008D53CB /* ViewController+ext.swift */,
+				2A56B1112C41060500768CE3 /* Color+ext.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -81,8 +118,37 @@
 			isa = PBXGroup;
 			children = (
 				2A0C02012C4063BD008D53CB /* MenuView.swift */,
+				2A56B1152C41151B00768CE3 /* MenuViewModel.swift */,
 			);
 			path = DropdownView;
+			sourceTree = "<group>";
+		};
+		2A1166B82C40D28E00D95D18 /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				2A1166B92C40D2A800D95D18 /* CarouselView.swift */,
+				2A56B1132C41096D00768CE3 /* CarouselViewModel.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		2A56B0A82C41050B00768CE3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2A56B0C52C41056100768CE3 /* Roboto-Black.ttf */,
+				2A56B0C82C41056100768CE3 /* Roboto-BlackItalic.ttf */,
+				2A56B0C62C41056100768CE3 /* Roboto-Bold.ttf */,
+				2A56B0C42C41056100768CE3 /* Roboto-BoldItalic.ttf */,
+				2A56B0C72C41056100768CE3 /* Roboto-Italic.ttf */,
+				2A56B0C22C41056100768CE3 /* Roboto-Light.ttf */,
+				2A56B0C92C41056100768CE3 /* Roboto-LightItalic.ttf */,
+				2A56B0C12C41056100768CE3 /* Roboto-Medium.ttf */,
+				2A56B0CA2C41056100768CE3 /* Roboto-MediumItalic.ttf */,
+				2A56B0C32C41056100768CE3 /* Roboto-Regular.ttf */,
+				2A56B0CB2C41056100768CE3 /* Roboto-Thin.ttf */,
+				2A56B0CC2C41056100768CE3 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		2A68CBFD2C404163007CB7E9 /* Cell */ = {
@@ -119,6 +185,7 @@
 				2A0C01F72C404F93008D53CB /* DetailView */,
 				2A7D051E2C400E570094BFA9 /* NetworkManager */,
 				2A0C01FC2C40534C008D53CB /* Utilities */,
+				2A56B0A82C41050B00768CE3 /* Fonts */,
 				2A7D050C2C400C7F0094BFA9 /* Assets.xcassets */,
 				2A7D050E2C400C7F0094BFA9 /* LaunchScreen.storyboard */,
 				2A7D05112C400C7F0094BFA9 /* Info.plist */,
@@ -211,9 +278,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A56B0D72C41056100768CE3 /* Roboto-Thin.ttf in Resources */,
+				2A56B0D02C41056100768CE3 /* Roboto-BoldItalic.ttf in Resources */,
+				2A56B0D62C41056100768CE3 /* Roboto-MediumItalic.ttf in Resources */,
+				2A56B0D32C41056100768CE3 /* Roboto-Italic.ttf in Resources */,
+				2A56B0D52C41056100768CE3 /* Roboto-LightItalic.ttf in Resources */,
 				2A7D050D2C400C7F0094BFA9 /* Assets.xcassets in Resources */,
 				2A7D05102C400C7F0094BFA9 /* Base in Resources */,
+				2A56B0CF2C41056100768CE3 /* Roboto-Regular.ttf in Resources */,
+				2A56B0D22C41056100768CE3 /* Roboto-Bold.ttf in Resources */,
+				2A56B0D42C41056100768CE3 /* Roboto-BlackItalic.ttf in Resources */,
+				2A56B0D82C41056100768CE3 /* Roboto-ThinItalic.ttf in Resources */,
+				2A56B0CD2C41056100768CE3 /* Roboto-Medium.ttf in Resources */,
 				2A68CC002C404202007CB7E9 /* BreedTblCell.xib in Resources */,
+				2A56B0CE2C41056100768CE3 /* Roboto-Light.ttf in Resources */,
+				2A56B0D12C41056100768CE3 /* Roboto-Black.ttf in Resources */,
 				2A0C01F92C404FC8008D53CB /* DogBreedDetailVC.storyboard in Resources */,
 				2A7D05182C400D150094BFA9 /* DogsListVC.storyboard in Resources */,
 			);
@@ -228,14 +307,19 @@
 			files = (
 				2A68CC012C404202007CB7E9 /* BreedTblCell.swift in Sources */,
 				2A0C01FB2C404FD5008D53CB /* DogBreedDetailVC.swift in Sources */,
+				2A1166BA2C40D2A800D95D18 /* CarouselView.swift in Sources */,
 				2A7D051A2C400D240094BFA9 /* DogsListVC.swift in Sources */,
 				2A0C01FE2C40535F008D53CB /* ViewController+ext.swift in Sources */,
+				2A56B1162C41151B00768CE3 /* MenuViewModel.swift in Sources */,
 				2A7D05042C400C7D0094BFA9 /* AppDelegate.swift in Sources */,
+				2A56B1122C41060500768CE3 /* Color+ext.swift in Sources */,
 				2A0C02022C4063BD008D53CB /* MenuView.swift in Sources */,
+				2A56B1142C41096D00768CE3 /* CarouselViewModel.swift in Sources */,
 				2A7D05202C400EB60094BFA9 /* NetworkManager.swift in Sources */,
 				2A7D05062C400C7D0094BFA9 /* SceneDelegate.swift in Sources */,
 				2A68CBFC2C403F36007CB7E9 /* DogModel.swift in Sources */,
 				2A7D051C2C400DFE0094BFA9 /* DogsListViewModel.swift in Sources */,
+				2A1166F42C40D59B00D95D18 /* DogBreedDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +471,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = DogsListVC;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,6 +500,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = DogsListVC;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

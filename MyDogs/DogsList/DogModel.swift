@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-struct DogBreedModel {
+struct DogBreedModel : Hashable{
     var name : String
     var imageURL : String?
     var imageCache : UIImage?

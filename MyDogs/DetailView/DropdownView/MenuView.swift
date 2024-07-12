@@ -9,29 +9,44 @@ import SwiftUI
 
 struct MenuView: View {
     
-    var items : [DogBreedModel] = []
-    
+    @ObservedObject var viewModel : MenuViewModel
+    var didTapOption : ((DogBreedModel,Int) -> ())?
+
     var body: some View {
         
         ScrollView {
             VStack{
                 Menu {
-                    ForEach(items,id: \.name) { item in
+                    ForEach(Array(viewModel.items.enumerated()),id: \.element) { index,item in
                         Button {
-                            
+                            self.viewModel.updateDropdownText(model: item)
+                            self.didTapOption?(item,index)
                         } label: {
                             Text(item.name)
                         }
-
                     }
                 } label: {
-                    Text("Dropdown")
+                    Text(viewModel.getDropdownText())
+                        .font(.custom("Roboto", size: 16).weight(.medium))
+                        .foregroundStyle(Color(hex: "384A62"))
+
+                    Image("chevronDown")
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 20,height: 20)
+                        .foregroundStyle(Color(hex: "283648"))
+                        
                 }
             }
         }
     }
+    
+    func updateDropdownText(text : String){
+        self.viewModel.dropdownText = text
+    }
+    
 }
 
 #Preview {
-    MenuView()
+    MenuView(viewModel: MenuViewModel(items: []))
 }

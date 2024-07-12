@@ -75,8 +75,8 @@ extension DogsListVC : UITableViewDataSource,UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let breedDetailVC = DogBreedDetailVC.storyboardInstance() as? DogBreedDetailVC{
-            breedDetailVC.dogBreed = self.viewModel.dogs
-            breedDetailVC.selectedIndex = indexPath.row
+            breedDetailVC.viewModel.dogBreed = self.viewModel.dogs
+            breedDetailVC.viewModel.selectedIndex = indexPath.row
             self.navigationController?.pushViewController(breedDetailVC, animated: true)
         }
     }

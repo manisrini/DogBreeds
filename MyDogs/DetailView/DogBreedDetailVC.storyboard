@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,13 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-Ew-D6s">
-                                <rect key="frame" x="76.666666666666686" y="362" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Ues-Yv-EgW"/>
-                                    <constraint firstAttribute="height" constant="128" id="pie-Nb-HlX"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5u-oU-aOc" userLabel="DropdownView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -30,19 +24,28 @@
                                     <constraint firstAttribute="height" constant="40" id="R3J-XT-gmp"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obt-Hz-i5X">
+                                <rect key="frame" x="20" y="338.66666666666669" width="353" height="175.00000000000006"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Whl-pQ-kjR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="x5u-oU-aOc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6kP-hU-oYq"/>
-                            <constraint firstItem="vz8-Ew-D6s" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Mrf-12-UeN"/>
+                            <constraint firstItem="Obt-Hz-i5X" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PJB-Th-Q8t"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Obt-Hz-i5X" secondAttribute="trailing" constant="20" id="QoC-Ei-umy"/>
+                            <constraint firstItem="Obt-Hz-i5X" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ZhD-42-L03"/>
+                            <constraint firstItem="Obt-Hz-i5X" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="d6R-Yr-1tl"/>
                             <constraint firstItem="x5u-oU-aOc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eNm-zJ-Z1f"/>
                             <constraint firstItem="x5u-oU-aOc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="uac-Z8-vgI"/>
-                            <constraint firstItem="vz8-Ew-D6s" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wUq-WC-SS0"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="breedImageView" destination="vz8-Ew-D6s" id="zjw-J2-nzw"/>
+                        <outlet property="carouselViewContainer" destination="Obt-Hz-i5X" id="BZC-80-dy4"/>
                         <outlet property="dropdownView" destination="x5u-oU-aOc" id="pBh-5V-sJh"/>
                     </connections>
                 </viewController>

@@ -18,7 +18,7 @@ final class DogsListVC : UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Your favie breeds"
+        self.title = "Your fav breeds"
         self.setupNavBar()
         self.initialSetup()
         self.addRefreshController()

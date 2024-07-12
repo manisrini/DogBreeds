@@ -14,6 +14,7 @@ class DogBreedDetailVC : UIViewController{
         
     @IBOutlet weak var carouselViewContainer: UIView!
     @IBOutlet weak var dropdownView: UIView!
+    @IBOutlet weak var messageLbl: UILabel!
     
     var viewModel = DogBreedDetailViewModel()
     var carouselView : CarouselView?
@@ -21,26 +22,24 @@ class DogBreedDetailVC : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Breed"
+        self.addStyles()
         self.addDropdownView()
         self.addCarouselView()
+        self.updateMessage(name: viewModel.getName(index: viewModel.selectedIndex))
     }
     
-    /*private func loadImage(){
-        NetworkManager.shared.getData(urlStr: self.viewModel.dogBreed[self.].imageURL ?? "") { data, error in
-            if let _data = data, let image = UIImage(data: _data){
-                DispatchQueue.main.async {
-
-                }
-            }else{
-                print("Error in download image")
-            }
-        }
-    }*/
-    
+    private func addStyles(){
+        self.messageLbl.font = UIFont(name: "Roboto-Medium", size: 16)
+        self.carouselViewContainer.layer.borderColor = UIColor.lightGray.cgColor
+        self.carouselViewContainer.layer.cornerRadius = 10
+        self.carouselViewContainer.layer.borderWidth = 2
+        self.carouselViewContainer.layer.borderColor = UIColor.lightGray.cgColor
+    }
+        
     private func addDropdownView(){
-        let menuView = MenuView(viewModel: MenuViewModel(items: self.viewModel.dogBreed)) { [weak self] model,index in
+        let menuView = MenuView(viewModel: MenuViewModel(items: self.viewModel.dogBreed,dropdownText: viewModel.getName(index: self.viewModel.selectedIndex))) { [weak self] model,index in
             self?.updateCarouselView(breed: model,index : index)
+            self?.updateMessage(name: model.name)
         }
         self.menuView = menuView
         let hostingController = UIHostingController(rootView: menuView)
@@ -55,8 +54,11 @@ class DogBreedDetailVC : UIViewController{
     }
     
     private func addCarouselView(){
-        let carouselView = CarouselView(viewModel: CarouselViewModel(items: self.viewModel.createCarouselModel())) { [weak self] selectedIndex in
+        let carouselView = CarouselView(viewModel: CarouselViewModel(items: self.viewModel.createCarouselModel(),selectedIndex: viewModel.selectedIndex)) { [weak self] selectedIndex in
             self?.updateDropdownView(index: selectedIndex)
+            if let vm = self?.viewModel,selectedIndex < vm.dogBreed.count{
+                self?.updateMessage(name: vm.dogBreed[selectedIndex].name)
+            }
         }
         self.carouselView = carouselView
         let carouselHostingController = UIHostingController(rootView: carouselView)
@@ -77,6 +79,10 @@ class DogBreedDetailVC : UIViewController{
     private func updateDropdownView(index : Int){
         let selectedValue = self.viewModel.dogBreed[index].name
         self.menuView?.updateDropdownText(text: selectedValue)
+    }
+    
+    private func updateMessage(name : String){
+        self.messageLbl.text = "Hi, I am \(name.capitalized)"
     }
     
 }

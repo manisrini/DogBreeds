@@ -9,13 +9,19 @@ import UIKit
 
 class BreedTblCell: UITableViewCell {
 
-    @IBOutlet weak var profileImgView: UIImageView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var profileImgView: CustomImageView!
     @IBOutlet weak var nameLbl: UILabel!
     
     static let nibName = "BreedTblCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.profileImgView.layer.cornerRadius = 15
+        self.profileImgView.layer.borderColor = UIColor.lightGray.cgColor
+        self.profileImgView.layer.borderWidth = 1
+        self.containerView.layer.cornerRadius = 8
+        self.nameLbl.font = UIFont(name: "Roboto-Medium", size: 16)
         // Initialization code
     }
 
@@ -23,24 +29,16 @@ class BreedTblCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    override func prepareForReuse() {
-        self.nameLbl.text = nil
-        self.profileImgView.image = nil
-    }
+//    override func prepareForReuse() {
+//        self.nameLbl.text = nil
+//        self.profileImgView.image = nil
+//    }
     
     func config(model : DogBreedModel){
-        self.nameLbl.text = model.name
+        self.nameLbl.text = model.name.capitalized
         
         if let _imageURL = model.imageURL{
-            NetworkManager.shared.getData(urlStr: _imageURL) { data, error in
-                if let _data = data, let image = UIImage(data: _data){
-                    DispatchQueue.main.async {
-                        self.profileImgView.image = image
-                    }
-                }else{
-                    print("Error in download image")
-                }
-            }
+            self.profileImgView.loadImage(url: _imageURL)
         }
     }
     

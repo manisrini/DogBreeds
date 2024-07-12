@@ -19,4 +19,11 @@ class DogBreedDetailViewModel{
         }
         return items
     }
+    
+    func getName(index : Int = 0) -> String{
+        if index < dogBreed.count {
+            return dogBreed[index].name
+        }
+        return ""
+    }
 }

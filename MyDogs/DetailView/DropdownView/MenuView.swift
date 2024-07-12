@@ -26,16 +26,30 @@ struct MenuView: View {
                         }
                     }
                 } label: {
-                    Text(viewModel.getDropdownText())
-                        .font(.custom("Roboto", size: 16).weight(.medium))
-                        .foregroundStyle(Color(hex: "384A62"))
-
-                    Image("chevronDown")
-                        .renderingMode(.template)
-                        .resizable()
-                        .frame(width: 20,height: 20)
-                        .foregroundStyle(Color(hex: "283648"))
+                    VStack(alignment: .leading){
+                        HStack{
+                            Text(viewModel.getDropdownText())
+                                .font(.custom("Roboto", size: 16).weight(.medium))
+                                .foregroundStyle(Color(hex: "384A62"))
+                                .padding(.leading,10)
+                            Image("chevronDown")
+                                .renderingMode(.template)
+                                .resizable()
+                                .frame(width: 20,height: 20)
+                                .foregroundStyle(Color(hex: "283648"))
+                                .padding(.trailing,10)
+                        }
+                        .frame(alignment: .leading)
+                        .cornerRadius(15)
+                        .padding(.vertical,10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color(hex: "90EE90"), lineWidth: 1)
+                        )
                         
+                    }
+                    .cornerRadius(10)
+                    .background(Color(hex: "90EE90"))
                 }
             }
         }

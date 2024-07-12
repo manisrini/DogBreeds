@@ -34,6 +34,7 @@ final class DogsListViewModel{
     func fetchSpecificDog(name : String,completion : @escaping(String?,String?) -> Void){
         
         let url = "https://dog.ceo/api/breed/\(name)/images/random"
+        
         NetworkManager.shared.getData(urlStr: url) { data, error in
             guard let _data = data else{ return }
                     

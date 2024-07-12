@@ -80,14 +80,14 @@ extension DogsListVC : UITableViewDataSource,UITableViewDelegate{
             self.navigationController?.pushViewController(breedDetailVC, animated: true)
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }
 
 extension DogsListVC : UISearchBarDelegate{
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-    }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.viewModel.isSearching = false
         self.view.endEditing(true)

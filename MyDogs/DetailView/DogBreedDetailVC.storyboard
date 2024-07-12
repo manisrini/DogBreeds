@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86z-LX-v6n">
-                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5u-oU-aOc" userLabel="DropdownView">
-                                        <rect key="frame" x="0.0" y="5" width="393" height="55"/>
+                                        <rect key="frame" x="0.0" y="5" width="393" height="45"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -29,12 +29,12 @@
                                     <constraint firstItem="x5u-oU-aOc" firstAttribute="top" secondItem="86z-LX-v6n" secondAttribute="top" constant="5" id="gKt-Xb-Y9f"/>
                                     <constraint firstItem="x5u-oU-aOc" firstAttribute="leading" secondItem="86z-LX-v6n" secondAttribute="leading" id="gQc-E7-AmM"/>
                                     <constraint firstAttribute="bottom" secondItem="x5u-oU-aOc" secondAttribute="bottom" id="iRL-gx-kdN"/>
-                                    <constraint firstAttribute="height" constant="60" id="ows-3P-dAD"/>
+                                    <constraint firstAttribute="height" constant="50" id="ows-3P-dAD"/>
                                     <constraint firstAttribute="trailing" secondItem="x5u-oU-aOc" secondAttribute="trailing" id="vK6-em-Knv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SoA-IM-88v" userLabel="CarouselView">
-                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="743"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obt-Hz-i5X">
                                         <rect key="frame" x="25" y="80" width="343" height="250"/>
@@ -84,7 +84,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="86z-LX-v6n" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DUf-ie-nCY"/>
                             <constraint firstItem="SoA-IM-88v" firstAttribute="top" secondItem="86z-LX-v6n" secondAttribute="bottom" id="EAE-K0-SvB"/>

@@ -28,7 +28,7 @@ struct CarouselView: View {
                 TabView(selection: $viewModel.selectedIndex) {
                     ForEach(Array(viewModel.items.enumerated()),id: \.element) { index,item in
                         ZStack{
-                            if let _imageURL = item.imageUrl,let url = URL(string: _imageURL){
+                            if let _imageURL = item.imageUrl,!_imageURL.isEmpty,let url = URL(string: _imageURL){
                                 WebImage(url: url)
                                     .renderingMode(.original)
                                     .resizable()
@@ -36,7 +36,7 @@ struct CarouselView: View {
                                     .transition(.fade(duration: 0.5))
                                     .scaledToFill()
                             }else{
-                                Text("Loading....")
+                                Text("On the way, just wait....")
                                     .onAppear{
                                         viewModel.fetchImage(name: item.name)
                                     }

@@ -14,18 +14,32 @@ final class DogsListVC : UIViewController{
     
     var viewModel = DogsListViewModel()
     private static let cellNibName = "ListTblCell"
-    
+    let refreshControl = UIRefreshControl()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Find your favie breeds"
+        self.title = "Your favie breeds"
+        self.setupNavBar()
         self.initialSetup()
+        self.addRefreshController()
     }
     
     private func setupNavBar(){
         guard let navigationBar = self.navigationController?.navigationBar else { return }
-
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationBar.isTranslucent = false
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Utils.shared.hexStringToUIColor(hex: "384A62")]
+    }
+        
+    func addRefreshController()
+    {
+        self.dogsTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+    }
+    
+    
+    @objc func pullToRefresh()
+    {
+        self.fetchDogs()
+        refreshControl.endRefreshing()
     }
 
     private func initialSetup(){

@@ -42,14 +42,14 @@ struct MenuView: View {
                         .frame(alignment: .leading)
                         .cornerRadius(15)
                         .padding(.vertical,10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(Color(hex: "90EE90"), lineWidth: 1)
-                        )
+//                        .overlay(
+//                            RoundedRectangle(cornerRadius: 15)
+//                                .stroke(Color(hex: "90EE90"), lineWidth: 1)
+//                        )
                         
                     }
-                    .cornerRadius(10)
                     .background(Color(hex: "90EE90"))
+                    .cornerRadius(10)
                 }
             }
         }

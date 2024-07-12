@@ -32,7 +32,6 @@
 		2A56B1162C41151B00768CE3 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56B1152C41151B00768CE3 /* MenuViewModel.swift */; };
 		2A56B1182C411ED100768CE3 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56B1172C411ED100768CE3 /* CustomImageView.swift */; };
 		2A56B11A2C4132DB00768CE3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56B1192C4132DB00768CE3 /* Utils.swift */; };
-		2A56B11E2C414A9B00768CE3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2A56B11D2C414A9B00768CE3 /* SDWebImageSwiftUI */; };
 		2A68CBFC2C403F36007CB7E9 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68CBFB2C403F36007CB7E9 /* DogModel.swift */; };
 		2A68CC002C404202007CB7E9 /* BreedTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A68CBFF2C404202007CB7E9 /* BreedTblCell.xib */; };
 		2A68CC012C404202007CB7E9 /* BreedTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68CBFE2C404202007CB7E9 /* BreedTblCell.swift */; };
@@ -44,6 +43,8 @@
 		2A7D051A2C400D240094BFA9 /* DogsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D05192C400D240094BFA9 /* DogsListVC.swift */; };
 		2A7D051C2C400DFE0094BFA9 /* DogsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D051B2C400DFE0094BFA9 /* DogsListViewModel.swift */; };
 		2A7D05202C400EB60094BFA9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D051F2C400EB60094BFA9 /* NetworkManager.swift */; };
+		2AE90D392C415D69004C66C9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE90D382C415D69004C66C9 /* SDWebImageSwiftUI */; };
+		2AE90D3B2C41648C004C66C9 /* UITableView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE90D3A2C41648C004C66C9 /* UITableView+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		2A7D05192C400D240094BFA9 /* DogsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsListVC.swift; sourceTree = "<group>"; };
 		2A7D051B2C400DFE0094BFA9 /* DogsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsListViewModel.swift; sourceTree = "<group>"; };
 		2A7D051F2C400EB60094BFA9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2AE90D3A2C41648C004C66C9 /* UITableView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A56B11E2C414A9B00768CE3 /* SDWebImageSwiftUI in Frameworks */,
+				2AE90D392C415D69004C66C9 /* SDWebImageSwiftUI in Frameworks */,
 				2A0C02052C4064EA008D53CB /* SnapKit in Frameworks */,
 				2A0C02072C4064EA008D53CB /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2A0C01FD2C40535F008D53CB /* ViewController+ext.swift */,
+				2AE90D3A2C41648C004C66C9 /* UITableView+ext.swift */,
 				2A56B1112C41060500768CE3 /* Color+ext.swift */,
 				2A56B1192C4132DB00768CE3 /* Utils.swift */,
 			);
@@ -248,7 +251,7 @@
 			packageProductDependencies = (
 				2A0C02042C4064EA008D53CB /* SnapKit */,
 				2A0C02062C4064EA008D53CB /* SnapKit-Dynamic */,
-				2A56B11D2C414A9B00768CE3 /* SDWebImageSwiftUI */,
+				2AE90D382C415D69004C66C9 /* SDWebImageSwiftUI */,
 			);
 			productName = MyDogs;
 			productReference = 2A7D05002C400C7D0094BFA9 /* MyDogs.app */;
@@ -280,7 +283,7 @@
 			mainGroup = 2A7D04F72C400C7D0094BFA9;
 			packageReferences = (
 				2A0C02032C4064E9008D53CB /* XCRemoteSwiftPackageReference "SnapKit" */,
-				2A56B11C2C414A9B00768CE3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				2AE90D372C415D69004C66C9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 2A7D05012C400C7D0094BFA9 /* Products */;
 			projectDirPath = "";
@@ -340,6 +343,7 @@
 				2A68CBFC2C403F36007CB7E9 /* DogModel.swift in Sources */,
 				2A7D051C2C400DFE0094BFA9 /* DogsListViewModel.swift in Sources */,
 				2A1166F42C40D59B00D95D18 /* DogBreedDetailViewModel.swift in Sources */,
+				2AE90D3B2C41648C004C66C9 /* UITableView+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +570,7 @@
 				minimumVersion = 5.7.1;
 			};
 		};
-		2A56B11C2C414A9B00768CE3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		2AE90D372C415D69004C66C9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
@@ -587,9 +591,9 @@
 			package = 2A0C02032C4064E9008D53CB /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
 		};
-		2A56B11D2C414A9B00768CE3 /* SDWebImageSwiftUI */ = {
+		2AE90D382C415D69004C66C9 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A56B11C2C414A9B00768CE3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = 2AE90D372C415D69004C66C9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

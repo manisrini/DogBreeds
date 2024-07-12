@@ -29,13 +29,13 @@ class DogBreedDetailVC : UIViewController{
     }
     
     private func addStyles(){
-        self.messageLbl.font = UIFont(name: "Roboto-Medium", size: 16)
+        self.messageLbl.font = UIFont(name: "Roboto", size: 18)
         self.carouselViewContainer.layer.borderColor = UIColor.lightGray.cgColor
         self.carouselViewContainer.layer.cornerRadius = 10
         self.carouselViewContainer.layer.borderWidth = 2
         self.carouselViewContainer.layer.borderColor = UIColor.lightGray.cgColor
     }
-        
+            
     private func addDropdownView(){
         let menuView = MenuView(viewModel: MenuViewModel(items: self.viewModel.dogBreed,dropdownText: viewModel.getName(index: self.viewModel.selectedIndex))) { [weak self] model,index in
             self?.updateCarouselView(breed: model,index : index)
@@ -82,7 +82,7 @@ class DogBreedDetailVC : UIViewController{
     }
     
     private func updateMessage(name : String){
-        self.messageLbl.text = "Hi, I am \(name.capitalized)"
+        self.messageLbl.text = "Hey Hubino, I am \(name.capitalized).\nSwipe to see my friends!!!."
     }
     
 }

@@ -12,7 +12,6 @@ import UIKit
 struct DogBreedModel : Hashable{
     var name : String
     var imageURL : String?
-    var imageCache : UIImage?
     
     init(name: String, imageURL: String? = nil) {
         self.name = name

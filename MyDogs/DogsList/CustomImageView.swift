@@ -10,17 +10,17 @@ import UIKit
 import SDWebImage
 
 class CustomImageView : UIImageView{
-    
-    var imageCache = NSCache<AnyObject,AnyObject>()
-    
+        
     func loadImage(url : String){
         
+        self.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        self.sd_imageTransition = .flipFromTop
+        
         if let url = URL(string: url){
-            SDWebImageDownloader.shared.downloadImage(with: url,options: .useNSURLCache,progress: {_,_,_ in }) { image, data, error, isFinished in
-                if error == nil && image != nil{
-                    self.image = image
-                }else{
-                    print("Error in downloding")
+            let placeholderImage = UIImage(named: "thumbnail")
+            self.sd_setImage(with: url) { image, error, type, url in
+                if error != nil{
+                    self.image = placeholderImage
                 }
             }
         }

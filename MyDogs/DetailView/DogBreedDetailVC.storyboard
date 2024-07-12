@@ -37,24 +37,43 @@
                                 <rect key="frame" x="0.0" y="119" width="393" height="733"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obt-Hz-i5X">
-                                        <rect key="frame" x="25" y="80" width="343" height="175"/>
+                                        <rect key="frame" x="25" y="80" width="343" height="250"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="175" id="Bfl-UJ-DpD"/>
+                                            <constraint firstAttribute="height" constant="250" id="Bfl-UJ-DpD"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu4-Yg-uin">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu4-Yg-uin">
                                         <rect key="frame" x="15" y="35" width="363" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="rmU-nQ-J8v"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="rmU-nQ-J8v"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.32549019607843138" green="0.10393902972027973" blue="0.079699604929384327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.2196078431372549" green="0.29019607843137252" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0yx-Fu-Cxc">
+                                        <rect key="frame" x="114" y="355" width="165" height="65"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipeleft" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-Kc-LKn">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="65"/>
+                                                <color key="tintColor" red="0.2196078431372549" green="0.29019607843137252" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swiperight" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-dm-j30">
+                                                <rect key="frame" x="82.666666666666657" y="0.0" width="82.333333333333343" height="65"/>
+                                                <color key="tintColor" red="0.2196078431372549" green="0.29019607843137252" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="165" id="Lgj-VS-ksK"/>
+                                            <constraint firstAttribute="height" constant="65" id="pGv-sv-HDe"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="0yx-Fu-Cxc" firstAttribute="top" secondItem="Obt-Hz-i5X" secondAttribute="bottom" constant="25" id="7De-zk-pkY"/>
+                                    <constraint firstItem="0yx-Fu-Cxc" firstAttribute="centerX" secondItem="SoA-IM-88v" secondAttribute="centerX" id="8AR-se-dae"/>
                                     <constraint firstItem="Obt-Hz-i5X" firstAttribute="leading" secondItem="SoA-IM-88v" secondAttribute="leading" constant="25" id="DYL-xi-rW9"/>
                                     <constraint firstItem="Nu4-Yg-uin" firstAttribute="leading" secondItem="SoA-IM-88v" secondAttribute="leading" constant="15" id="Hfg-wD-heb"/>
                                     <constraint firstItem="Nu4-Yg-uin" firstAttribute="top" secondItem="SoA-IM-88v" secondAttribute="top" constant="35" id="JEf-GW-NNq"/>
@@ -89,6 +108,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="swipeleft" width="512" height="512"/>
+        <image name="swiperight" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

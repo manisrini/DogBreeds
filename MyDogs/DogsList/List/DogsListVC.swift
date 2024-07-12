@@ -21,9 +21,17 @@ final class DogsListVC : UIViewController{
         self.initialSetup()
     }
     
+    private func setupNavBar(){
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationBar.isTranslucent = false
+    }
+
     private func initialSetup(){
         self.registerCells()
         self.searchBar.delegate = self
+        self.searchBar.searchTextField.clearButtonMode = .never
         self.dogsTableView.dataSource = self
         self.dogsTableView.delegate = self
         self.fetchDogs()
@@ -62,7 +70,12 @@ final class DogsListVC : UIViewController{
 extension DogsListVC : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       self.viewModel.getDataSource().count
+        if viewModel.getDataSource().count == 0{
+            self.dogsTableView.setEmptyMessageText("No Data Found !!!", textColor: Utils.shared.hexStringToUIColor(hex: "2F4058"))
+        }else{
+            self.dogsTableView.setEmptyMessageText("", textColor: .clear)
+        }
+        return self.viewModel.getDataSource().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,18 +94,20 @@ extension DogsListVC : UITableViewDataSource,UITableViewDelegate{
         }
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0.3
+        UIView.animate(withDuration: 0.5) {
+            cell.alpha = 1
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
 }
 
 extension DogsListVC : UISearchBarDelegate{
-        
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.viewModel.isSearching = false
-        self.view.endEditing(true)
-    }
-    
+            
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty{
             if !self.viewModel.isTextEmpty{

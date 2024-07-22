@@ -8,10 +8,6 @@
 
 <img src="Search.png" width="250" height="480" >
 
-*DETAIL VIEW:*
-
-<img src="detail.png" width="250" height="480" >
-
 *DROPDOWN VIEW:*
 
 <img src="dropdown.png" width="250" height="480" >
